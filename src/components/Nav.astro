@@ -34,12 +34,6 @@ import HamburgerNav from './Hamburger.astro';
 
 </nav>
 
-<script>
-// const HamburgerMenu = document.getElementById('HamburgerMenu')
-// HamburgerMenu.addEventListener('click', function(){console.log('clicked')})
-
-</script>
-
 <style>
 	nav {
 		margin: 0;
@@ -63,6 +57,35 @@ import HamburgerNav from './Hamburger.astro';
 	li {
 		display: flex;
 		justify-content: center;
+	}
+	.About-us a,
+	.Support a,
+	.Pricing a, 
+	.Documentation a {
+		position: relative;
+	}
+
+	.About-us a:hover:after,
+	.Support a:hover:after,
+	.Pricing a:hover:after, 
+	.Documentation a:hover:after {
+		width: 100%; 
+  		left: 0; 
+	}
+	.About-us a:after,
+	.Support a:after,
+	.Pricing a:after, 
+	.Documentation a:after {
+		background: none repeat scroll 0 0 transparent;
+		bottom: 0;
+		content: "";
+		/* display: block; */
+		height: 2px;
+		left: 50%;
+		position: absolute;
+		background: #fff;
+		transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		width: 0;
 	}
 
 	.Logo {
@@ -89,6 +112,10 @@ import HamburgerNav from './Hamburger.astro';
 		padding: 10px 20px 10px 20px;
 		margin: 20px 25px 20px 10px;
 	}
+	.Login a:hover {
+		background-color: white;
+		color: black
+	}
 	.Get-Started a {
 		background-color: #410074;
 		color: white;
@@ -97,6 +124,9 @@ import HamburgerNav from './Hamburger.astro';
 		padding: 10px 20px 10px 20px;
 		margin: 20px 25px 20px 10px;
 		white-space: nowrap;
+	}
+	.Get-Started a:hover {
+		background-color: #8539b4;
 	}
 	@media (max-width: 1920px) {
 		.container {
