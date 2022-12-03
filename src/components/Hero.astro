@@ -1,0 +1,53 @@
+---
+import LogoIcon from '/Logo.svg';
+import HamburgerNav from './Hamburger.astro';
+---
+<div class='HeroContainer'>
+	<h2 class='HeroText'>We do it better</h2>
+	<h4 class='Subtitle'>Better rates. Better support. And, we actually care.</h4>
+</div>
+<a class='HeroButton'>
+	<button>Get Started</button>
+</a>
+
+<style>
+	.HeroContainer {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	.HeroText {
+		font-family: 'Inter', sans-serif;
+		font-weight: 600;
+		font-size: 96px;
+		color: white;
+		margin: 100px 25px 0px 25px;
+	}
+	.Subtitle {
+		font-family: 'Inter', sans-serif;
+		font-weight: 600;
+		font-size: 24px;
+		margin: 25px;
+		color: #B6B2B7;
+	}
+	.HeroButton {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.HeroButton button {
+		font-family: 'Inter', sans-serif;
+		font-size: 32px;
+		padding: 20px 35px 20px 35px;
+		margin: 50px;
+		border-radius: 25px;
+		background-color: #410074;
+		border: 1px solid #410074;
+		color: white;
+	}
+	.HeroButton button:hover {
+		background-color: #983dd1;
+		cursor: pointer;
+	}
+</style>
