@@ -1,0 +1,125 @@
+---
+---
+<div class='TextContainer'>
+	<h3 class='PriceText'>We cut out the complexity</h3>
+	<h3 class='purpleText subText'>Simple Pricing</h3>
+</div>
+<div class='flex flex-center flex-column'>
+    <div class='box-container flex flex-center flex-column'>
+        <div style="text-align: right;">
+            <h3>1% + .10c</h3>
+            <h4>per transaction</h4>
+        </div>
+    </div>
+    <div class='flex flex-center extra-details'>
+        <h4><a class='purpleText'>X</a>No contracts</h4>
+        <h4><a class='purpleText'>X</a>No extra fees</h4>
+    </div>
+</div>
+
+<style>
+    @media (max-width: 1000px) {
+        .TextContainer h3 {
+            font-size: 48px !important;
+        }
+    }
+    @media (max-width: 700px) {
+        .TextContainer h3 {
+            font-size: 32px !important;
+        }
+        .box-container {
+            padding: 75px 100px 75px 100px !important;
+        }
+        h4 {
+            font-size: 24px !important;
+        }
+        h3 {
+            font-size: 48px !important;
+        }
+    }
+    @media (max-width: 500px) {
+        .box-container {
+            padding: 50px !important;
+        }
+        .extra-details h4 {
+            font-size: 20px !important;
+        }
+    }
+    @media (max-width: 375px) {
+        .box-container {
+            padding: 25px !important;
+            border-radius: 25px !important;
+        }
+        /* .extra-details h4 a {} */
+        .extra-details {
+            gap: 15px !important;
+        }
+        .extra-details h4 a {
+            margin: 5px !important;
+        }
+    }
+    .flex {
+        display: flex;
+    }
+    .flex-center {
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-column {
+        flex-direction: column;
+    }
+    .text-align-right {
+        text-align: right;
+    }
+    .TextContainer {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .PriceText {
+        color: white;
+        margin: 100px 25px 0px 25px;
+    }
+    .purpleText {
+        color: #8F00FF;
+    }
+    .subText {
+        margin: 10px 25px 50px 25px;
+    }
+    .PriceText, .purpleText {
+		font-family: 'Inter', sans-serif;
+    }
+    .TextContainer h3 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 64px;
+    }
+    .box-container {
+        border: 1px solid white;
+        color: white;
+        margin-top: 25px;
+        padding: 100px 125px 100px 125px;
+        border-radius: 50px;
+    }
+    .box-container h3, .box-container h4 {
+        margin: 0;
+        text-align: right;
+    }
+    h3 {
+        font-size: 64px;
+    }
+    h4 {
+        font-size: 32px;
+    }
+    .extra-details {
+        display: flex;
+        justify-content: center;
+        color: white;
+        gap: 25px;
+    }
+    .extra-details h4 a {
+        margin: 10px;
+    }
+</style>
