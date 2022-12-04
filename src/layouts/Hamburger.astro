@@ -6,7 +6,7 @@
 		<span></span>
 		<span></span>
 		<span></span>
-		<ul class="menu">
+		<ul class="menu" style='display: none;'>
 			<li class='About-us'>
 				<a href='/'>About us</a>
 			</li>
@@ -26,11 +26,6 @@
 	</div>
 </div>
 
-<script>
-// const HamburgerMenu = document.getElementById('HamburgerMenu')
-// HamburgerMenu.addEventListener('click', function(){console.log('clicked')})
-
-</script>
 <style>
 	@media (max-width: 1200px) {
 		.menuToggle {
@@ -63,17 +58,15 @@
 	.menu li a {
 		color: white;
 		white-space: nowrap;
-		padding: 0px 250px 0px 24px;
+		padding: 25px 250px 25px 24px;
 	}
 	.menu li {
+		display: flex;
+		align-items: center;
 		padding: 0;
-		margin-bottom: 48px;
 	}
 	.menuToggle {
-		position: relative;
-		z-index: 1;
-		/* left: ; */
-		
+		position: fixed;
 		-webkit-user-select: none;
 		user-select: none;
 	}
@@ -87,10 +80,10 @@
 	.menuToggle a:hover {
 		color: #BC4FFF;
 	}
-
-
 	.menuToggle input {
+		margin: 0;
 		display: block;
+		position: relative;
 		width: 40px;
 		height: 32px;
 		position: absolute;
@@ -104,10 +97,6 @@
 		
 		-webkit-touch-callout: none;
 	}
-
-	/*
-	* Just a quick hamburger
-	*/
 	.menuToggle span {
 		display: block;
 		width: 33px;
@@ -144,12 +133,17 @@
 	.menuToggle input:checked ~ span:nth-last-child(2) {
 		transform: rotate(-45deg) translate(0, -1px);
 	}
+	.menuToggle input:checked ~ .menu {
+		display: flex !important;
+		height: 100%;
+	}
 	.menu {
-		position: absolute;
-		margin: -50px 0 0 75px;
-		widows: 300px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		position: fixed;
+		margin: -100px 0 0 75px;
 		padding-top: 125px;
-		height: 100vh;
+		/* height: 100vh; */
 		list-style-type: none;
 		-webkit-font-smoothing: antialiased;
 		/* to stop flickering of text in safari */
@@ -169,6 +163,9 @@
 	}
 	.menuToggle input:checked ~ ul {
 		transform: translate(-75%, 0);
+	}
+	.menuToggle input:checked ~ .menuContainer div {
+		position: fixed !important;
 	}
 	body {
 		overflow-x: hidden;
