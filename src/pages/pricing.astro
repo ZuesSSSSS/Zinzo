@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../layouts/Nav.astro';
+import Footer from '../layouts/Footer.astro';
+
+import Pricing from '../components/Pricing.astro';
+---
+
+<Layout title='Zinzo | Payment Gateway' description='Zinzo has the best rates in the business. Take a peek.'>
+	<Nav />
+	<Pricing />
+	<Footer />
+</Layout>
+
+<style>
+	body {
+		background-color: black;
+		margin: 0;
+		padding: 0;
+	}
+</style>
