@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../layouts/Nav.astro';
+import Footer from '../layouts/Footer.astro';
+import Email from '../components/Email.astro';
+---
+<Layout title='Zinzo | Support' description='Zinzo currently has no public support'>
+	<Nav />
+    <Email />
+    <div>
+        <p>No current support articles exist (yet).</p>
+    </div>
+	<Footer />
+</Layout>
+
+<style>
+	body {
+		background-color: black;
+		margin: 0;
+		padding: 0;
+	}
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        margin: 200px 10px 200px 10px;
+    }
+    div p {
+        color: white;
+    }
+</style>
